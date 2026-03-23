@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dragon Bites Candy Co. | Glenelg Country School</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --red: #c62828;
+      --dark: #111;
+      --light: #fdfdfd;
+      --accent: #ffca28;
+      --bg: #faf3e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--red), #8e0000);
+      color: white;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #ffe082, var(--bg));
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0.5rem auto 1.5rem;
+      font-size: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--dark);
+      color: var(--accent);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-1px);
+      background: #b71c1c;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    h2 {
+      margin: 2rem 0 0.75rem;
+      font-size: 1.5rem;
+      color: var(--dark);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 0.9rem;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin-bottom: 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 0.25rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: #ffe0b2;
+      margin-top: 0.25rem;
+    }
+
+    ul {
+      margin-left: 1.1rem;
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .highlight-box {
+      background: #fff8e1;
+      border-left: 4px solid var(--accent);
+      padding: 0.9rem 1rem;
+      border-radius: 0.6rem;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .order-box {
+      background: #fce4ec;
+      border-left: 4px solid #d81b60;
+    }
+
+    .small {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Dragon Bites Candy Co.</div>
+    <nav>
+      <a href="#menu">Candy menu</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Glenelg Country School · In‑person delivery only</div>
+    <h1>Sweet candy drops, delivered at school.</h1>
+    <p>
+      Order your favorite candy and get it delivered to you in person at Glenelg Country School.
+      No shipping, no waiting—just treats.
+    </p>
+    <a href="#order" class="cta-btn">Order candy now</a>
+  </section>
+
+  <main>
+    <section id="menu">
+      <h2>Candy menu</h2>
+      <p class="small">Example items—edit these to match what you actually sell and your real prices.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Dragon Fire Sour Mix</h3>
+          <div class="price">$2.00 / bag</div>
+          <p>Super sour gummies and belts for brave dragons only.</p>
+          <span class="tag">Most popular</span>
+        </div>
+        <div class="card">
+          <h3>Galaxy Gummies</h3>
+          <div class="price">$1.50 / pack</div>
+          <p>Fruit gummies in star and planet shapes.</p>
+        </div>
+        <div class="card">
+          <h3>Crunchy Chocolate Bites</h3>
+          <div class="price">$2.50 / bag</div>
+          <p>Chocolate clusters with crispy crunch inside.</p>
+        </div>
+        <div class="card">
+          <h3>Mystery Dragon Bag</h3>
+          <div class="price">$3.00 / bag</div>
+          <p>A surprise mix of random candy from the menu.</p>
+          <span class="tag">Limited</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <h2>How it works</h2>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Step 1:</strong> Fill out the order form below with what you want.</li>
+          <li><strong>Step 2:</strong> Choose your grade and usual hangout spot at school.</li>
+          <li><strong>Step 3:</strong> I’ll confirm your order at school and deliver in person.</li>
+        </ul>
+        <p class="small">
+          No shipping. No home delivery. <strong>Only in‑person delivery at Glenelg Country School.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Place your order</h2>
+      <div class="card order-box">
+        <p><strong>Easy way:</strong> Use a Google Form for orders.</p>
+        <p class="small">
+          Create a Google Form with fields like: Name, Grade, Candy choice, Quantity, Preferred delivery time/place.
+          Then paste the link here.
+        </p>
+        <p style="margin-top:0.6rem;">
+          <strong>Order link:</strong>
+          <!-- Replace the # with your real Google Form link -->
+          <a href="#" target="_blank">Click here to order via Google Form</a>
+        </p>
+        <p class="small" style="margin-top:0.6rem;">
+          You can also add your school email here if you want people to email you orders instead.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Dragon Bites Candy Co. · Student‑run candy delivery at Glenelg Country School · In‑person delivery onl
+  </footer>
+</body>
+</html>
